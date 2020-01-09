@@ -1,6 +1,6 @@
 import React from 'react';
 import './Course.css';
-import {Button, Collapse, FormCheckbox} from 'shards-react';
+import {Button, Collapse, FormCheckbox, Card, CardBody} from 'shards-react';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
@@ -70,6 +70,79 @@ export default class Course extends React.Component {
                         </div>
                         </Collapse>
                     </div>
+                </div>
+                <div class='comments'>
+                    <h3>
+                        Comments
+                    </h3>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    </p>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                    </p>
+                </div>
+                <div>
+                    <h2>
+                        Instructors
+                    </h2>
+                    <h4>
+                        Winter 2020 Professors
+                    </h4>
+                        <div class='professor'>
+                        <p><b>
+                            Prof Name
+                        </b></p>
+                        <div class='profInfo'>
+                            <div class='engaging'>
+                                <p>
+                                    Engaging
+                                </p>
+                                <p class='info'>
+                                    Yes
+                                </p>
+                            </div>
+                            <div class='engaging'>
+                                <p>
+                                    Clarity
+                                </p>
+                                <p class='info'>
+                                    Decent
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <div>
+                    <h2>
+                        Textbooks
+                    </h2>
+                    <div class='textbooks'>
+                        <Card>
+                            <CardBody>
+                                Textbook <br></br>
+                                3rd Edition<br></br>
+                                $25
+                                </CardBody>
+                        </Card>
+                        <Card>
+                            <CardBody>
+                                Textbook <br></br>
+                                3rd Edition<br></br>
+                                $25
+                                </CardBody>
+                        </Card>
+                        <Card>
+                            <CardBody>
+                                Textbook <br></br>
+                                3rd Edition<br></br>
+                                $25
+                                </CardBody>
+                        </Card>
+                    </div>
+                    
                 </div>
             </div>
             

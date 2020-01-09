@@ -19,6 +19,36 @@
     padding-left: 82px; 
 }
 
+.comments {
+    padding-top: 40px;
+}
+
+.engaging {
+    display:flex; 
+    flex-direction:column;
+
+}
+
+.profInfo {
+    width: 20%;
+    display:flex; 
+    flex-direction:row;
+    padding-top: -20px;
+    justify-content: space-between;
+}
+
+.info {
+    padding-top: -20px;
+    font-weight: bold;
+}
+
+.textbooks {
+    width: 40%;
+    display:flex; 
+    flex-direction:row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
 /* .card {
     margin-top: 40px;
 } */
