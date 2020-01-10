@@ -1,6 +1,6 @@
 import React from 'react';
 import './Course.css';
-import {Button, Collapse, FormCheckbox, Card, CardBody} from 'shards-react';
+import {Button, Collapse, FormCheckbox, Card, CardBody, Link} from 'shards-react';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
