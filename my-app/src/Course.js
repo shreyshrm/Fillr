@@ -1,5 +1,7 @@
 import React from 'react';
 import './Course.css';
+import './typography.css';
+
 import {Button, Collapse, FormCheckbox, Card, CardBody} from 'shards-react';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,8 +12,26 @@ export default class Course extends React.Component {
         super(props);
         this.toggleDifficulty = this.toggleDifficulty.bind(this);
         this.toggleRecommend = this.toggleRecommend.bind(this);
-        this.state = { collapseDifficulty: false,
-        collapseRecommend: false };
+
+        this.toggleFirstLineOpen = this.toggleFirstLineOpen.bind(this);
+
+
+        this.state = { 
+            collapseDifficulty: false,
+            collapseRecommend: false,
+            isFirstLineOpen: false,
+            isSecondLineInfoOpen: false,
+            openReview: "", };
+    }
+
+    toggleFirstLineOpen(x) {
+        console.log("x was ", x);
+        if (x === this.state.openReview && this.state.isFirstLineOpen) {
+            this.setState({isFirstLineOpen: false, openReview: "",});
+        }
+        else {
+            this.setState({ openReview: x, isFirstLineOpen: true });
+        }
     }
 
     toggleDifficulty() {
@@ -20,6 +40,7 @@ export default class Course extends React.Component {
     toggleRecommend() {
         this.setState({ collapseRecommend: !this.state.collapseRecommend });
     }
+
     render() {
         return (
             <div class='container'>
@@ -45,32 +66,24 @@ export default class Course extends React.Component {
                     </div>
                 </div>
                 <h3>Past Student Feedback</h3>
-                <div class='card-container'>
-                    <div class='card'>
-                        <Button onClick={this.toggleDifficulty}>Difficulty</Button>
-                        <Collapse open={this.state.collapseDifficulty}>
-                        <div className="p-3 mt-3 border rounded">
-                            <h5>😍 Now you see me!</h5>
-                            <span>
-                            In sagittis nibh non arcu viverra, nec imperdiet quam suscipit.
-                            Sed porta eleifend scelerisque. Vestibulum dapibus quis arcu a
-                            facilisis.
-                            </span>
-                        </div>
-                        </Collapse>
+                <div class='card-container feedback-row feedback-top'>
+                    <div className='card feedback-card' onClick={() => this.toggleFirstLineOpen("difficulty")}>
+                        Difficulty
+                        <div class="rating">Average</div>
+                        <div class="small-text">65% of 133 ratings</div>
                     </div>
-                    <div class='card'>
-                        <Button onClick={this.toggleRecommend}>Recommended by</Button>
-                        <Collapse open={this.state.collapseRecommend}>
-                        <div className="p-3 mt-3 border rounded">
-                            <h5>yoooo</h5>
-                            <span>
-                            You better take this course!
-                            </span>
-                        </div>
-                        </Collapse>
+
+                    <div className='card feedback-card' onClick={() => this.toggleFirstLineOpen("recommended")}>
+                        Recommended
+                        <div class="rating">Yes</div>
+                        <div class="small-text">60% of 112 ratings</div>
                     </div>
                 </div>
+
+                <div className={'feedback-info ' + (this.state.isFirstLineOpen ? "show" : "hide")}>
+                    aldkfa
+                </div>
+
                 <div class='comments'>
                     <h3>
                         Comments
