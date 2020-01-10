@@ -44,24 +44,35 @@ export default class Course extends React.Component {
         return (
             <div class='container'>
                 <div class='information'>    
-                    <h1>Course Code</h1>        
-                    <p>Course description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <h1><b>CS 116:</b> Introduction to Computer Science 2</h1>        
+                    <p>This course builds on the techniques and patterns learned in CS 115 while making the transition to use of an imperative language. Generative and structural recursion. Mutation (assignment) and its role in an imperative language. Primitive types and basic I/O. Sequencing, selection, looping. Function definition and use. File and console I/O. Issues in computer science. [Offered: F,W,S]</p>
                 </div>
                 <div class='requirements'>
                     <div>
-                        <p>Prerequisites</p>
+                        <b>Prerequisites</b>
                         <div class='prerequisites'>
-                            <p>
-                                <FormCheckbox checked={true}>Prereq 1</FormCheckbox>
-                            </p>
-                            <FormCheckbox>Prereq 2</FormCheckbox>
+                            <ul>
+                                <li><FormCheckbox checked={true}>CS115</FormCheckbox></li>
+                                <li><FormCheckbox>CS231</FormCheckbox></li>
+                            </ul>
                         </div>
                     </div>
                     <div class='component'>
-                        <p>Fulfills your:</p>
-                        <p>- Humanties Requirements</p>
-                        <p>- Effective Requirements</p>
-                        <p>- Breadth/Depth Requirements</p>
+                        <b>Antirequisites</b>
+                        <div class='prerequisites'>
+                            <ul>
+                                <li><FormCheckbox checked={true}>CS115</FormCheckbox></li>
+                                <li><FormCheckbox>CS231</FormCheckbox></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='component'>
+                        <b>Fulfills these requirements:</b>
+                        <ul>
+                            <li>4 CS courses</li>
+                            <li>3rd course in prerequisite chain of 4</li>
+                            <li>4/4 breadth courses</li>
+                        </ul>
                     </div>
                 </div>
                 <h3>Past Student Feedback</h3>
